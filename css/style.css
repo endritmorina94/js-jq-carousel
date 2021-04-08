@@ -21,6 +21,7 @@ img {
 
 .arrow {
     font-size: 50px;
+    cursor: pointer;
 }
 
 .images{
