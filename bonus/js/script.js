@@ -70,8 +70,23 @@ arrLeft.click(function() {
 });
 
 
-
-
 // BONUS: BOTTONI DELLO SLIDER
 
-var btn
+//Aggiungo una funzione che si attiva al click di uno dei bottoni
+$(".btn").on("click", function () {
+
+    //Stabilisco una variabile che indica l'indice del bottone appena cliccato
+    var index = $(this).index();
+
+    //Tolgo la classe active-btn al bottone che la aveva
+    $(".btn.active-btn").removeClass("active-btn");
+
+    //Do la classe active-btn al bottone che è stato appena cliccato
+    $(this).addClass("active-btn");
+
+    //Tolgo la classe active all'immagine che la aveva
+    $(".images .active").removeClass("active");
+
+    //Do la classe active all'immagine che ha lo stesso indice del bottone appena cliccato
+    $("img").eq(index).addClass("active");
+})
