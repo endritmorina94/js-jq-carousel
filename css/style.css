@@ -3,3 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+img {
+    width: 100%;
+    display: none;
+}
+
+.container{
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.slider{
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 50px;
+}
+
+.images{
+    padding: 15px;
+}
+
+.active {
+    display: block;
+}
