@@ -12,6 +12,10 @@ img {
 .container{
     width: 1024px;
     margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .slider{
@@ -25,7 +29,7 @@ img {
 }
 
 .images{
-    padding: 15px;
+    padding: 10px 40px;
 }
 
 .active {

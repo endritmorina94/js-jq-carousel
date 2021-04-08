@@ -72,6 +72,6 @@ arrLeft.click(function() {
 
 
 
-// BONUS: BOTTONI DELLO slider
+// BONUS: BOTTONI DELLO SLIDER
 
 var btn
