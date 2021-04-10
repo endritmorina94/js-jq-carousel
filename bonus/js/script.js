@@ -1,3 +1,10 @@
+var images = $(".images");
+
+var imgHeight = $("#prima").css("height");
+
+$(images).css("height", imgHeight);
+
+
 // Indico la freccia destra con una variabile
 var arrRight = $(".arrow.right");
 
@@ -10,7 +17,7 @@ arrRight.click(function() {
     var currentBtn = $(".btn.active-btn");
 
     //Le tolgo la classe active, quindi la nascondo
-    currentImg.removeClass("active");
+    currentImg.removeClass("active").fadeOut("slow");
 
     currentBtn.removeClass("active-btn");
 
@@ -23,14 +30,14 @@ arrRight.click(function() {
     //tornerà visibile la prima immagine della lista
     if (currentImg.hasClass("last")){
 
-        $(".images .first").addClass("active");
+        $(".images .first").addClass("active").fadeIn("slow");
 
         $(".btn.first").addClass("active-btn");
 
     //Altrimenti do la classe active (rendo quindi visibile), l'immagine dopo
     } else {
 
-        nextImg.addClass("active");
+        nextImg.addClass("active").fadeIn("slow");
 
         nextBtn.addClass("active-btn");
 
@@ -48,7 +55,7 @@ arrLeft.click(function() {
     var currentImg = $(".images .active");
     var currentBtn = $(".btn.active-btn");
 
-    currentImg.removeClass("active");
+    currentImg.removeClass("active").fadeOut("slow");
     currentBtn.removeClass("active-btn");
 
 
@@ -57,12 +64,12 @@ arrLeft.click(function() {
 
     if (currentImg.hasClass("first")){
 
-        $(".images .last").addClass("active");
+        $(".images .last").addClass("active").fadeIn("slow");
         $(".btn.last").addClass("active-btn");
 
     } else {
 
-        prevImg.addClass("active");
+        prevImg.addClass("active").fadeIn("slow");
         prevBtn.addClass("active-btn");
 
     }
@@ -85,8 +92,8 @@ $(".btn").on("click", function () {
     $(this).addClass("active-btn");
 
     //Tolgo la classe active all'immagine che la aveva
-    $(".images .active").removeClass("active");
+    $(".images .active").removeClass("active").fadeOut("slow");
 
     //Do la classe active all'immagine che ha lo stesso indice del bottone appena cliccato
-    $("img").eq(index).addClass("active");
+    $("img").eq(index).addClass("active").fadeIn("slow");
 })

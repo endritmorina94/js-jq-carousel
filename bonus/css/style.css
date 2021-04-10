@@ -19,26 +19,54 @@ img {
 }
 
 .slider{
-    display: flex;
-    align-items: center;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+    position: relative;
+    padding: 10px;
 }
 
 .arrow {
     font-size: 50px;
+    color: white;
+    opacity: 0.7;
     cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.5s;
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.2));
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+.arrow.left {
+    left: 30px;
+}
+
+.arrow.right {
+    right: 30px;
 }
 
 .images{
-    padding: 10px 40px;
+    position: relative;
+}
+
+.images img {
+    position: absolute;
+}
+
+.images .first {
+    display: block;
 }
 
 .active {
-    display: block;
 }
 
 .slider-buttons {
     width: 100%;
     text-align: center;
+    margin-top: 20px;
 }
 
 .btn {
@@ -48,10 +76,11 @@ img {
     background-color: rgb(179, 179, 179);
     display: inline-block;
     cursor: pointer;
+    transition: background-color 0.5s;
 }
 
 .btn:hover {
-    border: 2px solid rgb(140, 140, 140);
+    background-color: black;
 }
 
 .active-btn {
