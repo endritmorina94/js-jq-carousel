@@ -9,7 +9,7 @@ img {
     display: none;
 }
 
-.container{
+.container {
     width: 1024px;
     margin: 0 auto;
     position: absolute;
@@ -18,10 +18,12 @@ img {
     transform: translate(-50%, -50%);
 }
 
-.slider{
+.slider {
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
     position: relative;
     padding: 10px;
+    margin: 0 auto;
+    width: 80%;
 }
 
 .arrow {
@@ -48,7 +50,7 @@ img {
     right: 30px;
 }
 
-.images{
+.images {
     position: relative;
 }
 
@@ -58,9 +60,6 @@ img {
 
 .images .first {
     display: block;
-}
-
-.active {
 }
 
 .slider-buttons {

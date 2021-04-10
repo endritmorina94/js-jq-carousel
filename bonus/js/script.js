@@ -1,7 +1,10 @@
+//Dichiaro una variabile che indica il contenitore delle immagini
 var images = $(".images");
 
+//Rilevo l'altezza della prima immagine e la indico in una variabile
 var imgHeight = $("#prima").css("height");
 
+//Assegno l'altezza dell'immagine al contenitore
 $(images).css("height", imgHeight);
 
 
@@ -12,12 +15,12 @@ var arrRight = $(".arrow.right");
 arrRight.click(function() {
 
     //Dichiaro una variabile che inidica l'immagine attualmente visibile
-    var currentImg = $(".images .active");
+    var currentImg = $(".images .displayed");
 
     var currentBtn = $(".btn.active-btn");
 
-    //Le tolgo la classe active, quindi la nascondo
-    currentImg.removeClass("active").fadeOut("slow");
+    //Le tolgo la classe displayed, quindi la nascondo
+    currentImg.removeClass("displayed").fadeOut("slow");
 
     currentBtn.removeClass("active-btn");
 
@@ -28,16 +31,16 @@ arrRight.click(function() {
 
     //Se l'immagine attuale ha la classe last ed è quindi l'ultima
     //tornerà visibile la prima immagine della lista
-    if (currentImg.hasClass("last")){
+    if (currentImg.hasClass("last")) {
 
-        $(".images .first").addClass("active").fadeIn("slow");
+        $(".images .first").addClass("displayed").fadeIn("slow");
 
         $(".btn.first").addClass("active-btn");
 
-    //Altrimenti do la classe active (rendo quindi visibile), l'immagine dopo
+    //Altrimenti do la classe displayed (rendo quindi visibile), l'immagine dopo
     } else {
 
-        nextImg.addClass("active").fadeIn("slow");
+        nextImg.addClass("displayed").fadeIn("slow");
 
         nextBtn.addClass("active-btn");
 
@@ -52,24 +55,24 @@ var arrLeft = $(".arrow.left");
 
 arrLeft.click(function() {
 
-    var currentImg = $(".images .active");
+    var currentImg = $(".images .displayed");
     var currentBtn = $(".btn.active-btn");
 
-    currentImg.removeClass("active").fadeOut("slow");
+    currentImg.removeClass("displayed").fadeOut("slow");
     currentBtn.removeClass("active-btn");
 
 
     var prevImg = currentImg.prev();
     var prevBtn = currentBtn.prev();
 
-    if (currentImg.hasClass("first")){
+    if (currentImg.hasClass("first")) {
 
-        $(".images .last").addClass("active").fadeIn("slow");
+        $(".images .last").addClass("displayed").fadeIn("slow");
         $(".btn.last").addClass("active-btn");
 
     } else {
 
-        prevImg.addClass("active").fadeIn("slow");
+        prevImg.addClass("displayed").fadeIn("slow");
         prevBtn.addClass("active-btn");
 
     }
@@ -80,7 +83,7 @@ arrLeft.click(function() {
 // BONUS: BOTTONI DELLO SLIDER
 
 //Aggiungo una funzione che si attiva al click di uno dei bottoni
-$(".btn").on("click", function () {
+$(".btn").on("click", function() {
 
     //Stabilisco una variabile che indica l'indice del bottone appena cliccato
     var index = $(this).index();
@@ -91,9 +94,9 @@ $(".btn").on("click", function () {
     //Do la classe active-btn al bottone che è stato appena cliccato
     $(this).addClass("active-btn");
 
-    //Tolgo la classe active all'immagine che la aveva
-    $(".images .active").removeClass("active").fadeOut("slow");
+    //Tolgo la classe displayed all'immagine che la aveva
+    $(".images .displayed").removeClass("displayed").fadeOut("slow");
 
-    //Do la classe active all'immagine che ha lo stesso indice del bottone appena cliccato
-    $("img").eq(index).addClass("active").fadeIn("slow");
+    //Do la classe displayed all'immagine che ha lo stesso indice del bottone appena cliccato
+    $("img").eq(index).addClass("displayed").fadeIn("slow");
 })
