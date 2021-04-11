@@ -9,6 +9,11 @@ img {
     display: none;
 }
 
+body{
+    background-color: #ffffff;
+    background-image: url("../img/brick.png");
+}
+
 .container {
     width: 1024px;
     margin: 0 auto;
@@ -19,17 +24,18 @@ img {
 }
 
 .slider {
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
     position: relative;
-    padding: 10px;
+    padding: 10px 11px;
     margin: 0 auto;
     width: 80%;
+    background-color: #ffffff;
 }
 
 .arrow {
-    font-size: 50px;
+    font-size: 47px;
     color: white;
-    opacity: 0.7;
+    opacity: 0.6;
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -43,11 +49,11 @@ img {
 }
 
 .arrow.left {
-    left: 30px;
+    left: 25px;
 }
 
 .arrow.right {
-    right: 30px;
+    right: 25px;
 }
 
 .images {
@@ -69,19 +75,21 @@ img {
 }
 
 .btn {
-    width: 35px;
-    height: 8px;
+    width: 38px;
+    height: 9px;
     margin: 0 1px;
-    background-color: rgb(179, 179, 179);
+    background-color: #929292;
+    border: 1px solid white;
     display: inline-block;
     cursor: pointer;
     transition: background-color 0.5s;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 .btn:hover {
-    background-color: black;
+    background-color: white;
 }
 
 .active-btn {
-    background-color: black;
+    background-color: white;
 }
