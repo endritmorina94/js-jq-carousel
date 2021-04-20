@@ -10,7 +10,8 @@ img {
 }
 
 .container{
-    width: 1024px;
+    max-width: 1024px;
+    min-width: 500px;
     margin: 0 auto;
     position: absolute;
     top: 50%;
@@ -19,6 +20,7 @@ img {
 }
 
 .slider{
+    width: 85%;
     display: flex;
     align-items: center;
 }
